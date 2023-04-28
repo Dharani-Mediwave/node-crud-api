@@ -1,0 +1,5 @@
+USERNAME='postgres'
+HOST='localhost'
+DATABASE='crud_api_demo'
+PASSWORD='postgres'
+PORT=5432
