@@ -15,7 +15,7 @@ const saveUser = async (req, res, next) => {
     }
 
     //checking if email already exist
-    const emailcheck = await User.findOne({
+    const emailcheck = await Signup.findOne({
       where: {
         email: req.body.email,
       },

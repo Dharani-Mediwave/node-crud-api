@@ -15,6 +15,7 @@ const signup = async (req, res) => {
     console.log('**** signup data ****', data);
     //saving the user
     const user = await Signup.create(data);
+    console.log("******** user data *****", JSON.stringify(user, null, 5));
     //if user details is captured
     //generate token with the user's id and the secretKey in the env file
     // set cookie with the token generated
