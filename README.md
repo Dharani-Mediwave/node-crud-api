@@ -31,3 +31,4 @@ $ npm start
 
 - https://dev.to/francescoxx/build-a-crud-rest-api-in-javascript-using-nodejs-express-postgres-docker-jkb
 - https://www.bezkoder.com/react-node-express-postgresql/
+- https://medium.com/@rachealkuranchie/node-js-authentication-with-postgresql-sequelize-and-express-js-20ae773da4c9
