@@ -1,5 +1,11 @@
 const controller = require('../controllers/users');
+const authController = require('../controllers/userAuthController');
+const authMiddleware = require('../middleware/userAuth');
 const router = require('express').Router();
+
+// signup endpoint
+//passing the middleware function to the signup
+router.post('/signup', authMiddleware.saveUser, authController.signup)
 
 // CRUD Routes /users
 router.get('/', controller.getUsers); // /users

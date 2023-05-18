@@ -12,4 +12,10 @@ const sequelize = new Sequelize(
   }
 )
 
+//checking if connection is done
+sequelize.authenticate().then(() => {
+  console.log(`Database connected successfully`)
+}).catch((err) => {
+  console.log(err)
+})
 module.exports = sequelize;
