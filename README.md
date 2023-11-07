@@ -28,6 +28,10 @@ $ npm start
 
 ```
 ## References
+# Install postgres in ubuntu 22.04
+- https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-22-04-quickstart
 
+# CRUD API
 - https://dev.to/francescoxx/build-a-crud-rest-api-in-javascript-using-nodejs-express-postgres-docker-jkb
 - https://www.bezkoder.com/react-node-express-postgresql/
+- https://blog.logrocket.com/crud-rest-api-node-js-express-postgresql/#what-restful-api
