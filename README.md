@@ -7,7 +7,7 @@
 </h1>
 
 ## Overview
-Building REST API using Node, Express, Sequelize and Postgres
+Building REST API using Node, Express, Sequelize, and Postgres
 
 ## How To Use
 
@@ -17,13 +17,13 @@ $ git clone git@github.com:Dharani-Mediwave/node-crud-api.git
 
 # Go into the repository
 $ cd node-crud-api
-$ create env file in root folder
-$ add database name and your postgres password in env
+$ Create an env file in the root folder
+$ Add your database name and your Postgres password in the env
 
 # Install dependencies
 $ npm install
 
-# For run the application
+# To run the application
 $ npm start
 
 ```
@@ -35,3 +35,8 @@ $ npm start
 - https://dev.to/francescoxx/build-a-crud-rest-api-in-javascript-using-nodejs-express-postgres-docker-jkb
 - https://www.bezkoder.com/react-node-express-postgresql/
 - https://blog.logrocket.com/crud-rest-api-node-js-express-postgresql/#what-restful-api
+
+# User Authorization
+- https://dev.to/shreshthgoyal/user-authorization-in-nodejs-using-postgresql-4gl
+- https://www.bezkoder.com/node-js-jwt-authentication-postgresql/
+
