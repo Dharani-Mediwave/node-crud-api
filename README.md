@@ -40,3 +40,6 @@ $ npm start
 - https://dev.to/shreshthgoyal/user-authorization-in-nodejs-using-postgresql-4gl
 - https://www.bezkoder.com/node-js-jwt-authentication-postgresql/
 
+# Postgres tutorial
+- https://www.postgresqltutorial.com/postgresql-getting-started/install-postgresql-linux/
+
