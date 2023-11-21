@@ -42,4 +42,4 @@ $ npm start
 
 # Postgres tutorial
 - https://www.postgresqltutorial.com/postgresql-getting-started/install-postgresql-linux/
-
+- https://phoenixnap.com/kb/how-to-connect-postgresql-database-command-line
