@@ -7,41 +7,31 @@ const saltRounds = 10;
 exports.register = async (req, res) => {
   const { name, email, phonenumber, password } = req.body;
   console.log("register controller :>>", req.body);
-  try {
-    bcrypt
-      .genSalt(saltRounds)
-      .then((salt) => {
-        console.log("Salt: ", salt);
-        return bcrypt.hash(password, salt);
-      })
-      .then((hash) => {
-        console.log("Hash: ", hash);
-        const user = {
-          name,
-          email,
-          phonenumber,
-          password: hash,
-        };
-        console.log("user log :>>>>", user);
-        // INSERT INTO sign_up (name, email, phonenumber, password) values ('niki', 'test@gmail.com', '9876543213','test@123');
-        client.query(
-          `INSERT INTO sign_up (name, email, phonenumber, password) VALUES ($1,$2,$3,$4);`,
-          [user.name, user.email, user.phonenumber, user.password],
-          (err, result) => {
-            console.log("result :>>>>>", result);
-            if (err) {
-              console.log("Insertion err :>>", err);
-              return res.status(500).json({
-                error: "Database error",
-              });
-            } else {
-              res.status(200).send({ message: "User added to database" });
-            }
-          }
-        );
-      })
-      .catch((err) => console.error(err.message));
-  } catch (error) {
-    console.log("reg err :>>>", err);
-  }
+  const salt = await bcrypt.genSalt();
+  const passwordHash = await bcrypt.hash(password, salt);
+
+  const user = {
+    name,
+    email,
+    phonenumber,
+    password: passwordHash,
+  };
+  console.log("user log :>>>>", user);
+  // INSERT INTO sign_up (name, email, phonenumber, password) values ('niki', 'test@gmail.com', '9876543213','test@123');
+  await client.query(
+    `INSERT INTO sign_up (name, email, phonenumber, password) VALUES ($1,$2,$3,$4);`,
+    [user.name, user.email, user.phonenumber, user.password],
+    (err, result) => {
+      console.log("result :>>>>>", result);
+      console.log("err :>>>>>", err);
+      if (err) {
+        console.log("Insertion err :>>", err);
+        return res.status(500).json({
+          error: "Database error",
+        });
+      } else {
+        res.status(200).send({ message: "User added to database" });
+      }
+    }
+  );
 };
