@@ -6,7 +6,7 @@ const saltRounds = 10;
 // Registration Function
 exports.register = async (req, res) => {
   const { name, email, phonenumber, password } = req.body;
-  console.log("register controller :>>", req.body);
+  // console.log("register controller :>>", req.body);
   const salt = await bcrypt.genSalt();
   const passwordHash = await bcrypt.hash(password, salt);
 
@@ -16,14 +16,11 @@ exports.register = async (req, res) => {
     phonenumber,
     password: passwordHash,
   };
-  console.log("user log :>>>>", user);
-  // INSERT INTO sign_up (name, email, phonenumber, password) values ('niki', 'test@gmail.com', '9876543213','test@123');
+  // console.log("user log :>>>>", user);
   await client.query(
-    `INSERT INTO sign_up (name, email, phonenumber, password) VALUES ($1,$2,$3,$4);`,
+    `INSERT INTO register (name, email, phonenumber, password) VALUES ($1,$2,$3,$4);`,
     [user.name, user.email, user.phonenumber, user.password],
     (err, result) => {
-      console.log("result :>>>>>", result);
-      console.log("err :>>>>>", err);
       if (err) {
         console.log("Insertion err :>>", err);
         return res.status(500).json({

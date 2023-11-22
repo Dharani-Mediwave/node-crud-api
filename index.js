@@ -10,15 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const port = process.env.PORT || 3001;
-app.use(bodyParser.json());
-
-app.get("/", (req, res) => {
-  res.status(200).send({ message: "The express server working" });
-});
-
-app.use("/user", user); //Route for /user endpoint of API
-
+const port = 3080;
 // Database connection
 client.connect((err) => {
   if (err) {
@@ -27,6 +19,12 @@ client.connect((err) => {
     console.log("Database connected successfully!");
   }
 });
+
+app.get("/", (req, res) => {
+  res.status(200).send({ message: "The express server working" });
+});
+
+app.use("/user", user); //Route for /user endpoint of API
 
 app.listen(port, () => {
   console.log(`App running at http://localhost:${port}`);
