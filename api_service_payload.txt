@@ -1,0 +1,16 @@
+POST : /user/register
+Payload
+{
+  name: ',
+  email: '',
+  password: '',
+  phonenumber: ''
+}
+===========================================
+POST : /user/login
+Payload
+{
+  email: '',
+  password: ''
+}
+===========================================

@@ -3,4 +3,4 @@ HOST='localhost'
 DATABASE='crud_api_demo'
 PASSWORD='postgres'
 PORT=5432
-SECRET_KEY=S8cwRLfiNtWqsEX6j51t
+SECRET_KEY=3aNjOvffMO2IUsZ1nHNHjoCoYqrOsq8u
