@@ -44,4 +44,4 @@ $ npm start
 - https://www.postgresqltutorial.com/postgresql-getting-started/install-postgresql-linux/
 - https://phoenixnap.com/kb/how-to-connect-postgresql-database-command-line
 - https://dev.to/caglarcercinli1/how-to-create-a-postgresql-database-on-ubuntu-2004-49a0
-
+- https://www.freecodecamp.org/news/manage-postgresql-with-psql
